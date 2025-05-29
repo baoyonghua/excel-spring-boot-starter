@@ -34,8 +34,7 @@ public class ManySheetWriteHandler extends AbstractSheetWriteHandler {
 	 */
 	@Override
 	public boolean support(Object obj) {
-		if (obj instanceof List) {
-			List<?> objList = (List<?>) obj;
+		if (obj instanceof List<?> objList) {
 			return !objList.isEmpty() && objList.get(0) instanceof List;
 		}
 		else {
